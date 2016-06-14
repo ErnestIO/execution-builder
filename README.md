@@ -6,8 +6,8 @@ Once all of them are fully processed it will emit back a message 'executions.cre
 
 ## Build status
 
-* master:  [![CircleCI Master](https://circleci.com/gh/ErnestIO/execution-builder/tree/master.svg?style=svg&circle-token=627e89c447fe342aff9815ca146b081a37c075ad)](https://circleci.com/gh/ErnestIO/execution-builder/tree/master)
-* develop: [![CircleCI Develop](https://circleci.com/gh/ErnestIO/execution-builder/tree/develop.svg?style=svg&circle-token=627e89c447fe342aff9815ca146b081a37c075ad)](https://circleci.com/gh/ErnestIO/execution-builder/tree/develop)
+* master: [![CircleCI](https://circleci.com/gh/ErnestIO/execution-builder/tree/master.svg?style=svg)](https://circleci.com/gh/ErnestIO/execution-builder/tree/master)
+* develop: [![CircleCI](https://circleci.com/gh/ErnestIO/execution-builder/tree/develop.svg?style=svg)](https://circleci.com/gh/ErnestIO/execution-builder/tree/develop)
 
 ## Installation
 
