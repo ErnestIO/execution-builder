@@ -7,4 +7,4 @@ WORKDIR /go/src/github.com/ernestio/execution-builder
 
 RUN make deps && go install
 
-ENTRYPOINT /go/bin/execution-builder
+ENTRYPOINT ./entrypoint.sh
