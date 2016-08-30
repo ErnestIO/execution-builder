@@ -4,20 +4,26 @@
 
 package main
 
-import "runtime"
+import (
+	"os"
+	"runtime"
+
+	l "github.com/ernestio/builder-library"
+)
+
+var s l.Scheduler
 
 func main() {
-	n := natsClient()
-	r := redisClient()
+	s.Setup(os.Getenv("NATS_URI"))
 
 	// Process requests
-	processRequest(n, r, "executions.create", "execution.create")
+	s.ProcessRequest("executions.create", "execution.create")
 
 	// Process resulting success
-	processResponse(n, r, "execution.create.done", "executions.create.", "execution.create", "completed")
+	s.ProcessSuccessResponse("execution.create.done", "execution.create", "executions.create.done")
 
 	// Process resulting errors
-	processResponse(n, r, "execution.create.error", "executions.create.", "execution.create", "errored")
+	s.ProcessFailedResponse("execution.create.error", "executions.create.error")
 
 	runtime.Goexit()
 }
