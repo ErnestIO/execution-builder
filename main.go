@@ -18,12 +18,15 @@ func main() {
 
 	// Process requests
 	s.ProcessRequest("executions.create", "execution.create")
+	s.ProcessRequest("bootstraps.create", "bootstrap.create")
 
 	// Process resulting success
 	s.ProcessSuccessResponse("execution.create.done", "execution.create", "executions.create.done")
+	s.ProcessSuccessResponse("bootstrap.create.done", "bootstrap.create", "bootstraps.create.done")
 
 	// Process resulting errors
 	s.ProcessFailedResponse("execution.create.error", "executions.create.error")
+	s.ProcessFailedResponse("bootstrap.create.error", "bootstraps.create.error")
 
 	runtime.Goexit()
 }
